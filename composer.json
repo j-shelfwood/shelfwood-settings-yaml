@@ -1,0 +1,63 @@
+{
+    "name": "shelfwood/settings-yaml",
+    "description": "Laravel YAML-based configuration with fallback hierarchy",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "yaml", "settings", "configuration", "multi-tenant"],
+    "authors": [
+        {
+            "name": "Shelfwood",
+            "email": "packages@shelfwood.dev"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../shelfwood-markdown-frontmatter"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0",
+        "illuminate/cache": "^11.0",
+        "illuminate/config": "^11.0",
+        "shelfwood/markdown-frontmatter": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shelfwood\\SettingsYaml\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Shelfwood\\SettingsYaml\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shelfwood\\SettingsYaml\\SettingsServiceProvider"
+            ],
+            "aliases": {
+                "Settings": "Shelfwood\\SettingsYaml\\Facades\\Settings"
+            }
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "test:coverage": "pest --coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
