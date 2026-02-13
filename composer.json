@@ -10,18 +10,12 @@
             "email": "packages@shelfwood.dev"
         }
     ],
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../shelfwood-markdown-frontmatter"
-        }
-    ],
     "require": {
         "php": "^8.2",
         "illuminate/support": "^11.0",
         "illuminate/cache": "^11.0",
         "illuminate/config": "^11.0",
-        "shelfwood/markdown-frontmatter": "*"
+        "shelfwood/markdown-frontmatter": "^1.0"
     },
     "require-dev": {
         "orchestra/testbench": "^9.0",
